@@ -1,9 +1,7 @@
 # \<t-pax-input\>
 
 
-
-[![Build Status](https://travis-ci.org/nxtComponent/t-pax-input.svg?branch=master)](https://travis-ci.org/nxtComponent/t-pax-input)
-
+[![Build Status](https://travis-ci.org/nxtComponent/t-pax-input.svg?branch=master)](https://travis-ci.org/nxtComponent/t-pax-input)  [![Coverage Status](https://coveralls.io/repos/github/nxtComponent/t-pax-input/badge.svg)](https://coveralls.io/github/nxtComponent/t-pax-input)
 
 ## Install the Polymer-CLI
 
