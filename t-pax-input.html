@@ -1,0 +1,79 @@
+<link rel="import" href="../polymer/polymer.html">
+<link rel="import" href="../paper-input/paper-input.html">
+
+<!--
+`t-pax-input`
+
+
+@demo demo/index.html 
+-->
+
+<dom-module id="t-pax-input">
+  <template>
+    <style>
+      :host {
+        display: block;
+      }
+    </style>
+    <h4>[[paxInfo.type]]
+    <div>
+      <paper-input id="firstName" label="First Name" value="{{paxInfo.firstName}}"></paper-input>
+      {{paxInfo.firstName}}
+      <paper-input id="middleName" label="Middle Name" value="{{paxInfo.middleName}}"></paper-input>
+      <paper-input id="lastName" label="Last Name" value="{{paxInfo.lastName}}"></paper-input>
+      <paper-input id="email" label="Email" value="{{paxInfo.email}}"></paper-input>
+      <paper-input id="phone" label="Phone Number" value="{{paxInfo.phone}}"></paper-input>
+    </div>
+ 
+
+  </template>
+
+  <script>
+    Polymer({
+
+      is: 't-pax-input',
+
+      properties: {
+        /* Passenger Information
+        * 
+        */
+         paxInfo : {
+           type: Object,
+           value : function(){
+             return {
+               type:"Adult",
+               firstName : "",
+               lastName : "",
+               middleName : "",
+               email: "",
+               phone : ""
+             }
+           }
+         },
+
+         errors : {
+           type:Array,
+           value:[]
+         }
+      },
+
+      /*
+      * Validate pax input. 
+      *
+      * @return {Boolean}
+      *
+      */
+      validate: function(){
+        var isValid = true;
+
+        if(!this.paxInfo.firstName){
+          isValid = false;
+          this.errors.push()  
+        }
+
+        return isValid;
+      }
+
+    });
+  </script>
+</dom-module>

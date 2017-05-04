@@ -1,0 +1,71 @@
+<!doctype html>
+
+<html>
+  <head>
+    <title>t-pax-input test</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, minimum-scale=1.0, initial-scale=1, user-scalable=yes">
+    <script src="../../webcomponentsjs/webcomponents-lite.js"></script>
+    <script src="../../web-component-tester/browser.js"></script>
+
+    <link rel="import" href="../t-pax-input.html">
+  </head>
+  <body>
+
+    <test-fixture id="basic">
+      <template>
+        <t-pax-input></t-pax-input>
+      </template>
+    </test-fixture>
+
+    <script>
+      suite('t-pax-input', function() {
+
+          var elm;
+
+          setup(function(){
+              elm = fixture('basic');
+          });
+
+          test('instantiating the element works', function() {
+            
+            assert.equal(elm.is, 't-pax-input');
+          });
+
+          function setDummyDataToInput(){
+              elm.$.firstName.value ="John";
+              elm.$.lastName.value = "Doe";
+              elm.$.email.value = "john@gmail.com";
+          }
+          test("input value setting testing", function(){
+              setDummyDataToInput();
+              
+              assert.equal(elm.paxInfo.firstName, "John", "input first name setting faile");
+              assert.equal(elm.paxInfo.lastName, "Doe", "input last name setting failed");
+              assert.equal(elm.paxInfo.email, "john@gmail.com", "Eamil setting failed");
+          });
+
+          test("input validation success", function(){
+            
+              setDummyDataToInput();
+
+            
+              var isValid = elm.validate();
+              
+              assert.equal(isValid, true, "input validation success test failed");
+            
+              
+          });
+
+          test("input validation failure", function(){
+                elm.$.firstName="";
+
+                var isValid = elm.validate();
+
+              assert.equal(isValid, false, "input validation failure test failed");
+          });
+
+      });
+    </script>
+  </body>
+</html>

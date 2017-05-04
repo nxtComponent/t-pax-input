@@ -1,0 +1,19 @@
+{
+  "suites": [
+    "test/t-pax-input_test.html"
+  ],
+    "verbose": true,
+    "plugins": {
+      "istanbul": {
+          "dir": "./coverage",
+          "reporters": ["text-summary", "lcov"],
+          "include": [
+              "/t-pax-input.html"
+          ],
+          "exclude": []
+      },
+      "local": {
+        "browsers": ["chrome", "firefox"]
+    }
+  }
+}
