@@ -2,6 +2,9 @@
 
 
 
+[![Build Status](https://travis-ci.org/nxtComponent/t-pax-input.svg?branch=master)](https://travis-ci.org/nxtComponent/t-pax-input)
+
+
 ## Install the Polymer-CLI
 
 First, make sure you have the [Polymer CLI](https://www.npmjs.com/package/polymer-cli) installed. Then run `polymer serve` to serve your application locally.
