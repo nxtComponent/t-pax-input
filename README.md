@@ -43,10 +43,10 @@ Your application is already set up to be tested via [web-component-tester](https
 ## Coverage Test
 
 
-Install `web-component-tester`, `istanbul` and `web-component-tester-istanbul` globally level
+Install `web-component-tester`, `istanbul` and `web-component-tester-istanbul` global level
 
 ```
-# 
+
 $ npm i -g web-component-tester@4.3.1 istanbul https://github.com/t2ym/web-component-tester-istanbul/tarball/0.10.1
 ```
 
